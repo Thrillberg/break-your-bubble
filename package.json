@@ -1,10 +1,10 @@
 {
-  "name": "react-fire",
+  "name": "break-your-bubble",
   "version": "1.0.0",
-  "description": "a react firebase spike",
+  "description": "a political chat app",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/boovius/react-fire.git"
+    "url": "git+ssh://git@github.com/Thrillberg/break-your-bubble.git"
   },
   "main": "index.js",
   "dependencies": {
@@ -52,15 +52,7 @@
     "test": "NODE_ENV=test mocha"
   },
   "keywords": [
-    "react",
-    "webpack",
-    "babel",
-    "es2015",
-    "hot module replacement",
-    "mocha",
-    "express",
-    "firebase"
   ],
-  "author": "boovius",
+  "author": "Thrillberg",
   "license": "ISC"
 }
