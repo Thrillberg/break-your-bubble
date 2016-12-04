@@ -49,7 +49,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=development node server.js",
-    "test": "NODE_ENV=test mocha"
+    "test": "NODE_ENV=test mocha app/components/__tests__/.setup.js"
   },
   "keywords": [
   ],
