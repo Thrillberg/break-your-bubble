@@ -1,17 +1,20 @@
 import Video from '../video';
 
 describe('Video', () => {
-  let video, videoElement, recordButton, record, controls, recording, stopButton, stop;
+  let video, videoElement, recordButton, record, controls, recording, stopButton, stop, playbackButton, playback, playingBack;
 
   beforeEach( () => {
     record = sinon.spy();
     stop = sinon.spy();
+    playback = sinon.spy();
+    playingBack = 'playing-back';
     recording = 'recording';
-    video = shallow(<Video record={record} mode={recording} stop={stop} />);
+    video = shallow(<Video record={record} mode={recording} stop={stop} playback={playback} />);
     videoElement = video.find('video');
     controls = video.find('.controls');
     recordButton = controls.find('.record');
     stopButton = controls.find('.stop');
+    playbackButton = controls.find('.playback');
   });
 
   describe('Initialization', () => {
@@ -40,6 +43,10 @@ describe('Video', () => {
     it('has a stop button', () => {
       expect(stopButton.length).to.eql(1);
     });
+
+    it('has a playback button', () => {
+      expect(playbackButton.length).to.eql(1);
+    });
   });
 
   describe('Interaction', () => {
@@ -51,6 +58,11 @@ describe('Video', () => {
     it('calls stop function on stopButton click', () => {
       stopButton.simulate('click');
       expect(stop.called).to.eql(true);
+    });
+
+    it('calls playback function on playbackButton click', () => {
+      playbackButton.simulate('click');
+      expect(playback.called).to.eql(true);
     });
   });
 });
