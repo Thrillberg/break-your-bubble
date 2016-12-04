@@ -21,9 +21,6 @@ describe('Dashboard', () => {
   });
 
   describe('Interaction', () => {
-    it('record function calls getUserMedia', () => {
-      dashboard.instance().record();
-      expect(getUserMedia.called).to.eql(true);
-    });
+
   });
 });

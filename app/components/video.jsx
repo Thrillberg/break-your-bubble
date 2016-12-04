@@ -8,9 +8,10 @@ export default class Video extends React.Component {
   render() {
     return(
       <div>
-        <video></video>
+        <video className={this.props.mode}></video>
         <div className='controls'>
           <button className='record' onClick={this.props.record}>Record</button>
+          <button className='stop' onClick={this.props.stop}>Stop</button>
         </div>
       </div>
     )
